@@ -1,4 +1,30 @@
 # Full Stack FastAPI Template
+
+## Local dev start
+cd backend
+fastapi dev app/main.py
+http://localhost:8000
+http://localhost:8000/docs
+
+cd frontend
+npm run dev
+http://localhost:5173
+
+## Frontend: Update libraries
+```bash
+npm outdated
+npx npm-check-updates
+npx npm-check-updates -u && npm install
+```
+
+## Backend: Update libraries
+```bash
+uv pip list --outdated
+uv lock --upgrade
+uv add package_name --upgrade
+uv sync
+```
+
 ## Docker Compose
 ```bash
 docker compose up -d --build
@@ -11,10 +37,9 @@ docker compose watch
 ```bash
 uv tree
 uv pip list
-uv pip list --outdated
-uv lock --upgrade
+uv add package_name
 uv sync
-uv add package_name --upgrade
+uv lock
 ```
 
 ## Technology Stack and Features
